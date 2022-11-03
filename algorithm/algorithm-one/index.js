@@ -14,16 +14,24 @@ function search(nums, target) {
 //Challenge three
 function searchInsert(nums, target) {
     let result = -1;
-    for (let i in nums) {
-        console.log(nums[i]);
+    for (let i = 0; i < nums.length; i++) {
         if (target > nums[nums.length - 1]) {
-            result = nums.indexOf(nums[nums.length - 1]) + 1;
+            result = nums.length;
+        }
+        else if (target < nums[0]) {
+            result = 0;
+        }
+        else if (target === nums[i]) {
+            result = nums.indexOf(nums[i]);
+        }
+        else if (target >= nums[i] && target < nums[i + 1]) {
+            result = nums.indexOf(nums[i + 1]);
         }
     }
     return result;
 }
+//Runtime: 102ms
+//Memory: 42MB
 
-let arr = [2, 3, 8, 10, 11];
-console.log(searchInsert(arr, 20));
 
-//console.log(arr[arr.length - 1]);
+//Challenge two
