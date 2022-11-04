@@ -11,6 +11,8 @@ function search(nums, target) {
 //Runtime: 118ms
 //Memory: 46.3MB
 
+//Challenge two - skipped for now
+
 //Challenge three
 function searchInsert(nums, target) {
     let result = -1;
@@ -33,5 +35,13 @@ function searchInsert(nums, target) {
 //Runtime: 102ms
 //Memory: 42MB
 
-
-//Challenge two
+//Challenge four
+function sortedSquares(nums) {
+    let absNumbers = [];
+    for (let i = 0; i < nums.length; i++) {
+        absNumbers.push(Math.abs(nums[i]) ** 2);
+    }
+    return absNumbers.sort((a, b) => a - b);
+}
+//Runtime: 89ms
+//Memory: 48.6MB
