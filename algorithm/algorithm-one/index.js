@@ -45,3 +45,55 @@ function sortedSquares(nums) {
 }
 //Runtime: 89ms
 //Memory: 48.6MB
+
+//Challenge five - Passes 37/38 tests; Time Limit Exceeded Error!
+// function rotate(nums, k) {
+//     for (let i = 0; i <= k; i++) {
+//         let shift = nums.slice(-1);
+//         nums.unshift(shift[0]);
+//         nums.pop();
+//     }
+//     return nums;
+// }
+
+//Solution from bakigul
+function rotate(nums, k) {
+    for (let i = nums.length - 1; i >= 0; i--) {
+        nums[i + k] = nums[i]
+    }
+    for (let i =  k - 1; i >=0; i--) {
+        nums[i] = nums.pop()
+    }
+    return nums
+}
+
+//Runtime: 242ms
+//Memory: 59.5MB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
