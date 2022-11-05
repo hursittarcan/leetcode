@@ -73,24 +73,64 @@ function rotate(nums, k) {
 
 //Challenge six
 function moveZeroes(nums) {
-    let size = nums.length;
-    nums = nums.filter(number => number !== 0);
-    let nulls = size - nums.length;
-    for (let i = 0; i < nulls; i++) {
-        nums.push(0);
+    // let size = nums.length;
+    // nums = nums.filter(number => number !== 0);
+    // let nulls = size - nums.length;
+    // for (let i = 0; i < nulls; i++) {
+    //     nums.push(0);
+    // }
+    for (let i = nums.length - 1; i >= 0; i--) {
+        let num = nums[i];
+        if (!num) {
+            nums.splice(i, 1);
+            nums.push(0);
+        }
+    }
+}
+
+//Challenge
+function twoSum(numbers, target) {
+    for (let j = 0; j < numbers.length; j++) {
+        let val = numbers[j];
+        let v = numbers.indexOf(val) + 1;
+        for (let i = 1; i < numbers.length; i++) {
+            if ((val + numbers[i]) === target) {
+                return [v, numbers.indexOf(numbers[i], v) + 1];
+            }
+        }
+    }
+}
+
+let arr = [0,4, 1,4]
+//console.log(twoSum(arr, 5))
+
+//Challenge 344. Reverse String
+function reverseString(s) {
+    for (let i = s.length - 1; i >= 0; i--) {
+        console.log(s.length)
+        console.log(s[i]);
+        console.log(s);
+        s.unshift(s[i]);
+        s.pop();
+    }
+    return s;
+}
+
+// let s = ["H","a","n","n","a","h"]
+// console.log(reverseString(s));
+
+//Leetcode Challenge 27 - Remove element
+function removeElement(nums, val) {
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === val) {
+            nums.splice(i, 1);
+        }
     }
     return nums;
 }
 
-let arr = [0,1,0,3,12];
-console.log(moveZeroes(arr));
-
-
-
-
-
-
-
+let s = [1, 2, 1, 5, 6, 7, 8]
+console.log(removeElement(s, 1));
 
 
 
