@@ -89,17 +89,17 @@ function moveZeroes(nums) {
 }
 
 //Challenge
-function twoSum(numbers, target) {
-    for (let j = 0; j < numbers.length; j++) {
-        let val = numbers[j];
-        let v = numbers.indexOf(val) + 1;
-        for (let i = 1; i < numbers.length; i++) {
-            if ((val + numbers[i]) === target) {
-                return [v, numbers.indexOf(numbers[i], v) + 1];
-            }
-        }
-    }
-}
+// function twoSum(numbers, target) {
+//     for (let j = 0; j < numbers.length; j++) {
+//         let val = numbers[j];
+//         let v = numbers.indexOf(val) + 1;
+//         for (let i = 1; i < numbers.length; i++) {
+//             if ((val + numbers[i]) === target) {
+//                 return [v, numbers.indexOf(numbers[i], v) + 1];
+//             }
+//         }
+//     }
+// }
 
 let arr = [0,4, 1,4]
 //console.log(twoSum(arr, 5))
@@ -145,10 +145,35 @@ function reverseWords(s) {
     return split.join(' ');
 }
 
-str = "Let's take LeetCode contest";
-console.log(reverseWords(str));
+//str = "Let's take LeetCode contest";
+//console.log(reverseWords(str));
 //Runtime: 132ms
 //Memory: 48MB
+
+//LEETCODE 167. Two Sum II - Input Array Is Sorted
+
+function twoSum(numbers, target) {
+    for (let j = 0; j < numbers.length; j++) {
+        let val = numbers[j];
+        let v = numbers.indexOf(val) + 1;
+        for (let i = 1; i < numbers.length; i++) {
+            if ((val + numbers[i]) === target) {
+                return [v, numbers.indexOf(numbers[i], v) + 1];
+            }
+        }
+    }
+}
+
+let arrr = [0, 0]
+console.log(twoSum(arrr, 0));
+
+//876. Middle of the Linked List
+
+
+
+
+
+
 
 
 
