@@ -164,13 +164,23 @@ function twoSum(numbers, target) {
     }
 }
 
-let arrr = [0, 0]
-console.log(twoSum(arrr, 0));
+//let arrr = [0, 0]
+//console.log(twoSum(arrr, 0));
 
 //876. Middle of the Linked List
+function middleNode(head) {
+    head = Array.from(head);
+    if (head.length % 2 !== 0) {
+        head.splice(0, Math.floor(head.length / 2));
+    }
+    else {
+        head.splice(0, head.length / 2)
+    }
+    return head;
+}
 
-
-
+head = [1,2,3,4,5];
+console.log(middleNode(head));
 
 
 
