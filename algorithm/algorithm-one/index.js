@@ -114,8 +114,8 @@ function reverseString(s) {
     return s;
 }
 
-let s = ["H","a","n","n","a","h"]
-console.log(reverseString(s));
+/*let s = ["H","a","n","n","a","h"]
+console.log(reverseString(s));*/
 //Runtime: 103ms
 //Memory: 49.8MB
 
@@ -132,9 +132,23 @@ function removeElement(nums, val) {
 // let s = [1, 2, 1, 5, 6, 7, 8]
 // console.log(removeElement(s, 1));
 
+//Challenge 557. Reverse Words in a String III
+function reverseWords(s) {
+    let split = s.split(' ');
+    for (let i = 0; i < split.length; i++) {
+        let rev = "";
+        for (let j = split[i].length - 1; j >= 0; j--) {
+            rev += split[i][j];
+        }
+        split[i] = rev;
+    }
+    return split.join(' ');
+}
 
-
-
+str = "Let's take LeetCode contest";
+console.log(reverseWords(str));
+//Runtime: 132ms
+//Memory: 48MB
 
 
 
