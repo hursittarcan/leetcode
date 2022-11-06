@@ -106,18 +106,18 @@ let arr = [0,4, 1,4]
 
 //Challenge 344. Reverse String
 function reverseString(s) {
-    for (let i = s.length - 1; i >= 0; i--) {
-        console.log(s.length)
-        console.log(s[i]);
-        console.log(s);
-        s.unshift(s[i]);
-        s.pop();
+    let size = s.length;
+    for (let i = size - 1; i >= 0; i--) {
+        s.push(s[i]);
     }
+    s.splice(0, size);
     return s;
 }
 
-// let s = ["H","a","n","n","a","h"]
-// console.log(reverseString(s));
+let s = ["H","a","n","n","a","h"]
+console.log(reverseString(s));
+//Runtime: 103ms
+//Memory: 49.8MB
 
 //Leetcode Challenge 27 - Remove element
 function removeElement(nums, val) {
@@ -129,8 +129,8 @@ function removeElement(nums, val) {
     return nums;
 }
 
-let s = [1, 2, 1, 5, 6, 7, 8]
-console.log(removeElement(s, 1));
+// let s = [1, 2, 1, 5, 6, 7, 8]
+// console.log(removeElement(s, 1));
 
 
 
