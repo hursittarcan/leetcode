@@ -1,24 +1,25 @@
+//58. Length Of Last Word - Easy
+
+//Runtime: 55ms (Beats 57.69%)
+//Memory: 41.01mb (Beats 98.89%)
+
 lengthOfLastWord = function(s) {
-    let lastPos = 0;
-    let firstPos = 0;
+    let positionFirstLetter = 0;
+    let positionLastLetter = 0;
 
     for (let i = s.length - 1; i >= 0; i--) {
         if (s[i] !== ' ') {
-            lastPos = i;
+            positionLastLetter = i;
             break;
         }
     }
 
     for (let i = s.length - 1; i >= 0; i--) {
         if (s[i] !== ' ' &&  s[i - 1] === ' ') {
-            firstPos = i;
+            positionFirstLetter = i;
             break;
         }
     }
 
-    return lastPos - firstPos + 1;
+    return positionLastLetter - positionFirstLetter + 1;
 };
-
-
-let s = "Hello World     "
-console.log(lengthOfLastWord(s));
