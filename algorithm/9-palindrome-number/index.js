@@ -1,4 +1,4 @@
-//1. Palindrome Number - Easy
+//9. Palindrome Number - Easy
 
 //Runtime: 303ms (Beats 5.4%)
 //Memory: 51.2mb (Beats 41.89%)
