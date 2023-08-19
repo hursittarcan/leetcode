@@ -1,8 +1,3 @@
-
-
-
-
-
 lengthOfLastWord = function(s) {
     let lastPos = 0;
     let firstPos = 0;
@@ -21,9 +16,9 @@ lengthOfLastWord = function(s) {
         }
     }
 
-    //console.log(s[firstPos, lastPos]);
+    return lastPos - firstPos + 1;
 };
 
 
 let s = "Hello World     "
-lengthOfLastWord(s);
+console.log(lengthOfLastWord(s));
