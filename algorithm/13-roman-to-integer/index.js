@@ -3,6 +3,11 @@
 //Runtime: 107ms (Beats 85.81%)
 //Memory: 47.20mb (Beats 57.14%)
 
+//12. Integer To Roman - 2 - Easy
+
+//Runtime: 101ms (Beats 93.02%)
+//Memory: 46.07mb (Beats 97.96%)
+
 romanToInt = function(s) {
     let result = 0;
     for (let i = 0; i < s.length; i++) {
@@ -71,6 +76,9 @@ romanToInt2 = function(s) {
     for (let i = 0; i < s.length; i++) {
         switch (s[i]) {
             case 'I':
+                result++;
+                break;
+            case 'V':
                 result += s[i - 1] === 'I' ? 3 : 5;
                 break;
             case 'X':
