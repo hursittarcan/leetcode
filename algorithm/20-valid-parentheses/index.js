@@ -1,7 +1,3 @@
-
-
-
-
 isValid = function(s) {
     let result = false;
 
