@@ -1,3 +1,8 @@
+//12. Integer To Roman - Easy
+
+//Runtime: 107ms (Beats 85.81%)
+//Memory: 47.20mb (Beats 57.14%)
+
 romanToInt = function(s) {
     let result = 0;
     for (let i = 0; i < s.length; i++) {
